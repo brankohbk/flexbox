@@ -1,0 +1,182 @@
+/**********************/
+/* GENERAL STYLES */
+:root{
+  --color-1:hsl(148, 94%, 51%);
+  --color-2:hsl(226, 73%, 50%);
+}
+body {
+  margin: 0%;
+  font-family: "Lato", sans-serif;
+  background-image: url("../assets/topography.svg"),
+  linear-gradient(180deg, var(--color-1), var(--color-2));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+h1 {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 2.5rem;
+  filter: drop-shadow(0px 0px 5px white);
+  cursor:default;
+
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+footer{
+  align-self: stretch;
+  padding: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+}
+footer a{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items:center;  
+  filter: drop-shadow(0 0 3px white);
+  transition: filter .4s;
+}
+footer a:hover{
+  
+  filter: drop-shadow(0 0 15px rgb(251, 255, 0));
+}
+
+footer span{
+  margin-left: 1rem;
+}
+
+/**********************/
+/* PANEL */
+.panel {
+  min-width: 90%;
+  margin: 1.5rem 0;
+  background: rgba(41, 133, 209, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.329);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+.panel fieldset{
+ border: none;
+}
+.panel label {
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+.panel fieldset {
+  display: flex;
+  flex-direction: column;
+}
+.panel .buttons {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.panel .buttons > * {
+  border: none;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+}
+.panel .buttons :nth-child(2) {
+  margin: 0 1rem;
+  background-color: rgb(255, 145, 130);
+}
+.panel .buttons :last-child {
+  background-color: rgb(201, 255, 130);
+  color: #000;
+}
+.panel .buttons > *:hover {
+  filter: brightness(80%);
+}
+
+/**********************/
+/* CHECKBOXES */
+input[type="checkbox"] {
+  display: none;
+}
+label span {
+  transition: opacity 0.4s;
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+  background-color: rgb(255, 166, 166);
+}
+#flex-direction ~ label {
+  position: relative;
+}
+
+#flex-direction ~ label span {
+  position: absolute;
+  top: 0;
+}
+#flex-direction:not(:checked) ~ * > .col {
+  opacity: 0;
+}
+#flex-direction:checked ~ * > .row {
+  opacity: 0;
+}
+
+#flex-wrap ~ label {
+  position: relative;
+}
+#flex-wrap ~ label span {
+  position: absolute;
+  top: 0;
+}
+#flex-wrap:not(:checked) ~ * > .no-wrap {
+  opacity: 0;
+}
+#flex-wrap:checked ~ * > .wrap {
+  opacity: 0;
+}
+
+.wrap,
+.row {
+  background-color: greenyellow;
+}
+
+/* ICON */
+.🎩{
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: transform .5s;
+}
+.✨{
+  opacity: 0;
+  transition: opacity .8s .6s;
+}
+.🎩:hover{
+  transform: rotate(270deg);
+
+}
+.🎩:hover ~ .✨{
+  opacity: 1;
+}
+
+
+/**********************/
+/* Media queries */
+@media (min-width: 768px) {
+  .panel {
+    min-width: 35vw;
+    margin: 0;
+  }
+}
+@media (min-width: 996px) {
+  body{
+    background-image: url("../assets/topography.svg"),
+    linear-gradient(45deg, var(--color-1), var(--color-2));
+  }
+  .panel {
+    min-width: 335px;
+    margin: 0;
+  }
+}

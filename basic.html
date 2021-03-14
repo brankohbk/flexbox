@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Intro.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Akaya Telivigala', cursive;
+            background-image: url('./topography.svg');
+            text-align:center;
+        }
+
+      .container {
+        font-family: 'Lato', sans-serif;
+        box-shadow: 0 0 30px 0 #234edd;
+        margin: 5vh 15vw;
+        width: 70vw;
+        height: 600px;
+        background-image: linear-gradient(45deg,#0af879,#234edd);
+
+        /* FLEX ✨MAGIC✨ */
+        display: flex;
+        flex-direction:row;
+        /* Acomodar en el eje principal */
+        justify-content: space-evenly;
+
+        /* Acomodar en el eje transversal */
+        align-items: center;
+
+        /* Autosalto de línea */
+        flex-wrap: wrap;
+      }
+      .item{
+          width: 80px;
+          height: 50px;
+          box-shadow: 0 0 0 2px black inset;
+          font-size: 40px;
+          color: white;
+
+      }
+      .item-1{
+          background-color: cornflowerblue;
+          flex-grow: 1;
+          order:1;
+          margin: 1em;
+      }
+      .item-2{
+          background-color: rgb(237, 155, 100);
+          flex-grow: 2;
+          order:3;
+
+      }
+      .item-3{
+          background-color: rgb(100, 237, 130);
+      }
+      .item-4{
+          background-color: rgb(81, 105, 238);
+          /* align-self: flex-end; */
+      }
+      .item-5{
+          background-color: rgb(235, 57, 125);
+          order: 2;
+          
+      }
+      .item-6{
+          background-color: rgb(255, 110, 14);
+          flex-shrink: 10;
+      }
+
+    </style>
+  </head>
+  <body>
+      <h1>Flex ✨MAGIC✨</h1>
+      <div class="container">
+          <div class="item item-1">1</div>
+          <div class="item item-2">2</div>
+          <div class="item item-3">3</div>
+          <div class="item item-4">4</div>
+          <div class="item item-5">5</div>
+          <div class="item item-6">6</div>
+      </div>
+
+  </body>
+</html>

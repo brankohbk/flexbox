@@ -1,0 +1,69 @@
+/**********************/
+/* CONTAINER */
+.container {
+  width: 90%;
+  margin-bottom: 3rem;
+  min-height: 70vh;
+  background-color: rgba(255, 255, 255, 0.226);
+  box-shadow: 0 0 30px 0px rgba(255, 255, 255, 0.438);
+  border: 1px solid rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all 0.8s;
+
+  /* FLEX ✨MAGIC✨ */
+  display: flex;
+  flex-direction: row;
+  /* Acomodar en el eje principal */
+  justify-content: space-evenly;
+  /* Acomodar en el eje transversal */
+  align-items: center;
+  /* Autosalto de línea */
+  flex-wrap: wrap;
+}
+
+/**********************/
+/* ITEMS */
+.item {
+  width: 80px;
+  height: 50px;
+  box-shadow: 0 0 0 2px black inset;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+.selected {
+  box-shadow: 0 0 7px 2px rgb(255, 230, 0);
+}
+
+.item-1 {
+  background-color: rgb(100, 148, 237);
+}
+.item-2 {
+  background-color: rgb(237, 155, 100);
+}
+.item-3 {
+  background-color: rgb(100, 237, 130);
+}
+.item-4 {
+  background-color: rgb(81, 105, 238);
+  align-self: auto;
+}
+.item-5 {
+  background-color: rgb(235, 57, 125);
+}
+.item-6 {
+  background-color: rgb(255, 110, 14);
+}
+
+/**********************/
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .container {
+    width: 50vw;
+    margin-bottom: 0;
+  }
+}
