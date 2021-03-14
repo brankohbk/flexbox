@@ -2,11 +2,11 @@
 
 ## How it started:
 
-[Basic flexbox example](./basic.html)
+[Basic flexbox example](https://brankohbk.github.io/flexbox/basic.html)
 
 ## How is going:
 
-[Flexbox + DOM manipulation](./index.html)
+[Flexbox + DOM manipulation](https://brankohbk.github.io/flexbox/index.html)
 \(Try to find any easter egg ;\) \)
 
 
