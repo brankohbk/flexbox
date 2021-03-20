@@ -4,6 +4,7 @@ const html = document.querySelector(":root");
 const container = document.querySelector(".container");
 const containerForm = document.querySelector("#container-form");
 const itemForm = document.querySelector("#item-form");
+const selectedItemLegend = document.querySelector(".selected-item");
 const flexItems = document.querySelectorAll(".item");
 const hat = document.querySelector(".🎩");
 let selectedItem;
@@ -20,11 +21,13 @@ function changeColors() {
 function resetSelection() {
   flexItems.forEach((flexItem) => flexItem.classList.remove("selected"));
   selectedItem = "";
+  selectedItemLegend.innerText ="";
 }
 function selectItem(event) {
   event.stopPropagation();
   resetSelection();
   selectedItem = event.target;
+  selectedItemLegend.innerText=` Selected ${selectedItem.innerText}`
   selectedItem.classList.add("selected");
   const computedStyle = window.getComputedStyle(selectedItem);
   itemForm.elements["width"].value = computedStyle.width.replace("px", "");
@@ -103,11 +106,11 @@ Array.from(itemForm.elements).forEach((el) => {
 const consoleColor = Math.floor(Math.random() * (180 - 30) + 30);
 console.log("%c Hello, fellow Dev! \n ( ͡° ͜ʖ ͡°)つ",`background-color: #090909; color:hsl(${consoleColor}, 94%, 51%);font-size:2em;padding:2rem`);
 console.log(`
-%cI hope you found this snippet useful.\n
-In that case, you can drop a like or follow me on:\n
-- Twitter: 🐦 @branko_h \n
-- Github: 🐱‍🚀 /brankohbk \n
-- LinkedIn: 👨‍💼 /in/branko-haberkon \n
-so you don´t miss when i upload a new one. \n
-See you soon!\n\n`
-,`color:black;background-color: hsl(${consoleColor}, 94%, 51%);font-size:1.5em; margin: .5rem`);
+%cI hope you found this snippet useful.
+In that case, you can drop a like or follow me on:
+- Twitter: 🐦 @branko_h 
+- Github: 🐱‍🚀 /brankohbk 
+- LinkedIn: 👨‍💼 /in/branko-haberkon 
+so you don´t miss when i upload a new one. 
+See you soon!`
+,`color:black;background-color: hsl(${consoleColor}, 94%, 51%);font-size:1.5em; padding: .5rem`);

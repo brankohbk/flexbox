@@ -15,35 +15,16 @@
   </head>
   <body>
     <h1>
-      FlexBox 
+      <span class="title-text">FlexBox</span> 
       <span class="🎩">🎩</span> 
       <span class="✨">✨MAGIC✨</span>
     </h1>
     <main>
       <aside class="panel">
-        <form id="container-form">
-          <fieldset>
-            <legend>Container</legend>
-            <fieldset>
-              <input type="checkbox" id="flex-direction" />
-              <label for="flex-direction"
-                >Flex Direction <span class="row">ROW - - -</span
-                ><span class="col">COLUMN &equiv;</span>
-              </label>
-            </fieldset>
-            <fieldset>
-              <input type="checkbox" id="flex-wrap" />
-              <label for="flex-wrap">
-                Flex Wrap
-                <span class="no-wrap">NO WRAP</span>
-                <span class="wrap">WRAP</span>
-              </label>
-            </fieldset>
-          </fieldset>
-        </form>
+
         <form id="item-form">
           <fieldset>
-            <legend>Item</legend>
+            <legend>Item<span class="selected-item"></span></legend>
             <fieldset>
               <label for="width">Width (px)</label>
               <input type="number" id="width" placeholder="500" step="15" />
@@ -82,6 +63,27 @@
             </fieldset>
           </fieldset>
 
+        </form>
+        <form id="container-form">
+          <fieldset>
+            <legend>Container</legend>
+            <fieldset>
+              <input type="checkbox" id="flex-direction" />
+              <label for="flex-direction"
+                >Flex Direction <span class="row">ROW - - -</span
+                ><span class="col">COLUMN &equiv;</span>
+              </label>
+            </fieldset>
+            <fieldset>
+              <input type="checkbox" id="flex-wrap" />
+              <label for="flex-wrap">
+                Flex Wrap
+                <span class="no-wrap">NO WRAP</span>
+                <span class="wrap">WRAP</span>
+              </label>
+            </fieldset>
+          </fieldset>
+          
           <fieldset class="buttons">
             <a href="">Reset All</a>
             <button type="reset">Reset Form</button>
@@ -106,7 +108,7 @@
         href="http://www.github.com/brankohbk/flexbox"
       >
         <img src="./assets/GitHub-Mark-32px.png" alt="GithubLogo" />
-        <span> Branko Haberkon - &copy; 2021 </span>
+        <span> Branko Haberkon - 2021 </span>
       </a>
     </footer>
     <script src="./scripts/main.js"></script>
