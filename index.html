@@ -10,8 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lato&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/flexbox.css" />
+    <link rel="stylesheet" href="./styles/panel.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <h1>
@@ -25,9 +26,18 @@
         <form id="item-form">
           <fieldset>
             <legend>Item<span class="selected-item"></span></legend>
+            <div class="grid-container">
             <fieldset>
               <label for="width">Width (px)</label>
               <input type="number" id="width" placeholder="500" step="15" />
+            </fieldset>
+            <fieldset>
+              <label for="height">Height (px)</label>
+              <input type="number" id="height" placeholder="500" step="15" />
+            </fieldset>
+            <fieldset>
+              <label for="margin">Margin (px)</label>
+              <input type="number" id="margin" placeholder="500" step="15" />
             </fieldset>
             <fieldset>
               <label for="grow">Flex Grow</label>
@@ -47,48 +57,58 @@
               <label for="justify-self">Justify Self</label>
               <select name="" id="justify-self">
                 <option value="auto">auto</option>
-                <option value="flex-end">flex-end</option>
                 <option value="flex-start">flex-start</option>
                 <option value="center">center</option>
+                <option value="flex-end">flex-end</option>
               </select>
             </fieldset>
             <fieldset>
               <label for="align-self">Align Self</label>
               <select name="" id="align-self">
                 <option value="auto">auto</option>
-                <option value="flex-end">flex-end</option>
                 <option value="flex-start">flex-start</option>
                 <option value="center">center</option>
+                <option value="flex-end">flex-end</option>
               </select>
             </fieldset>
-          </fieldset>
-
-        </form>
-        <form id="container-form">
-          <fieldset>
-            <legend>Container</legend>
             <fieldset>
-              <input type="checkbox" id="flex-direction" />
-              <label for="flex-direction"
-                >Flex Direction <span class="row">ROW - - -</span
-                ><span class="col">COLUMN &equiv;</span>
-              </label>
-            </fieldset>
-            <fieldset>
-              <input type="checkbox" id="flex-wrap" />
-              <label for="flex-wrap">
-                Flex Wrap
-                <span class="no-wrap">NO WRAP</span>
-                <span class="wrap">WRAP</span>
-              </label>
-            </fieldset>
+              <label for="bg-color">Background</label>
+              <input type="color" id="bg-color"  />
+            </fieldset>            
+          </div>
           </fieldset>
-          
           <fieldset class="buttons">
             <a href="">Reset All</a>
             <button type="reset">Reset Form</button>
             <!-- <button type="submit">Apply</button> -->
           </fieldset>
+        </form>
+
+        <form id="container-form">
+          <fieldset>
+            <legend>Container</legend>
+            <div class="grid-container">
+            <fieldset>
+              <input type="checkbox" id="flex-direction" />
+              <label for="flex-direction"
+                >
+                <span class="label-text">Flex Direction</span>
+                <span class="row">ROW - - -</span
+                  ><span class="col">COLUMN &equiv;</span>
+                </label>
+              </fieldset>
+              <fieldset>
+                <input type="checkbox" id="flex-wrap" />
+                <label for="flex-wrap">
+                <span class="label-text">Flex Wrap</span>               
+                <span class="wrap">WRAP</span>
+                <span class="no-wrap">NO WRAP</span>
+              </label>
+            </fieldset>
+          </div>
+          </fieldset>
+          
+
         </form>
       </aside>
       <div class="container">

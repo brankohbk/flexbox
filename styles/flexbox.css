@@ -2,8 +2,8 @@
 /* CONTAINER */
 .container {
   width: 90%;
-  /* margin-bottom: 3rem; */
   min-height: 50vh;
+  max-height: 80vh;
   background-color: rgba(255, 255, 255, 0.226);
   box-shadow: 0 0 30px 0px rgba(255, 255, 255, 0.438);
   border: 1px solid rgba(255, 255, 255, 0.329);
@@ -43,7 +43,7 @@
   background-color: rgb(100, 148, 237);
 }
 .item-2 {
-  background-color: rgb(237, 155, 100);
+  background-color: #ed9b64;
 }
 .item-3 {
   background-color: rgb(100, 237, 130);
@@ -59,11 +59,3 @@
   background-color: rgb(255, 110, 14);
 }
 
-/**********************/
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
-  .container {
-    width: 50vw;
-    /* margin-bottom: 0; */
-  }
-}

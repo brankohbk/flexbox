@@ -1,0 +1,120 @@
+/**********************/
+/* PANEL */
+.panel {
+  width: 100%;
+  margin: 1.5rem 0;
+  background: rgba(41, 133, 209, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.329);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  order: 2;
+}
+
+.panel legend {
+  font-size: larger;
+}
+.panel label {
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+.panel fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.panel .buttons {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.panel .buttons > * {
+  border: none;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+}
+.panel .buttons :nth-child(2) {
+  margin: 0 1rem;
+  background-color: rgb(255, 145, 130);
+}
+.panel .buttons :last-child {
+  background-color: rgb(201, 255, 130);
+  color: #000;
+}
+.panel .buttons > *:hover {
+  filter: brightness(80%);
+}
+
+/**********************/
+/* ITEM FORM */
+#item-form .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#item-form input,
+#item-form select {
+  width: 100%;
+  padding: 2px;
+  margin: 0%;
+  border: 1px solid;
+}
+
+/**********************/
+/* CONTAINER FORM */
+
+#container-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-form .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  user-select: none;
+}
+
+#container-form .grid-container fieldset {
+  padding: 0;
+  line-height: 2rem;
+}
+#container-form label {
+  display: flex;
+  flex-flow: column wrap;
+}
+.label-text {
+  width: 100%;
+}
+
+/**********************/
+/* CHECKBOXES */
+input[type="checkbox"] {
+  display: none;
+}
+.wrap,
+.no-wrap,
+.row,
+.col {
+  transition: opacity 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 166, 166);
+}
+.wrap,
+.row {
+  background-color: greenyellow;
+}
+#flex-direction ~ label,
+#flex-wrap ~ label {
+  position: relative;
+}
+
+#flex-direction:not(:checked) ~ * > .col,
+#flex-direction:checked ~ * > .row,
+#flex-wrap:not(:checked) ~ * > .no-wrap,
+#flex-wrap:checked ~ * > .wrap {
+  opacity: 0.1;
+}

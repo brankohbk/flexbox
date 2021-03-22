@@ -1,41 +1,28 @@
 /**********************/
 /* GENERAL STYLES */
-:root{
-  --color-1:hsl(148, 94%, 51%);
-  --color-2:hsl(226, 73%, 50%);
+:root {
+  --color-1: hsl(148, 94%, 51%);
+  --color-2: hsl(226, 73%, 50%);
 }
 body {
   margin: 0%;
   font-family: "Lato", sans-serif;
   background-image: url("../assets/topography.svg"),
-  linear-gradient(180deg, var(--color-1), var(--color-2));
+    linear-gradient(180deg, var(--color-1), var(--color-2));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-h1 {
-  /* border: solid; */
-  padding: 0 1rem;
-  font-family: "Akaya Telivigala", cursive;
-  font-size: 2.5rem;
-  filter: drop-shadow(0px 0px 5px white);
-  cursor:default;
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  /* width: 90vw; */
-  justify-content: flex-start;
-  justify-content: center;
-}
+
 main {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-footer{
+footer {
   align-self: stretch;
   padding: 2rem;
   font-weight: 700;
@@ -43,194 +30,103 @@ footer{
   justify-content: flex-end;
   margin-bottom: 2rem;
 }
-footer a{
+footer a {
   color: #000;
   text-decoration: none;
   display: flex;
-  align-items:center;  
+  align-items: center;
   filter: drop-shadow(0 0 3px white);
-  transition: filter .4s;
+  transition: filter 0.4s;
 }
-footer a:hover{
-  
+footer a:hover {
   filter: drop-shadow(0 0 15px rgb(251, 255, 0));
 }
 
-footer span{
+footer span {
   margin-left: 1rem;
 }
 
 /**********************/
-/* PANEL */
-.panel {
-  min-width: 90%;
-  margin: 1.5rem 0;
-  background: rgba(41, 133, 209, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.329);
-  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border-radius: 10px;
-  order: 2;
-
-}
-.panel fieldset{
- border: none;
-}
-.panel legend{
-  font-size: larger;
-}
-.panel label {
-  font-weight: bolder;
-  margin-bottom: 0.5rem;
-}
-.panel fieldset {
-  display: flex;
-  flex-direction: column;
-}
-.panel .buttons {
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.panel .buttons > * {
-  border: none;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.4s;
-}
-.panel .buttons :nth-child(2) {
-  margin: 0 1rem;
-  background-color: rgb(255, 145, 130);
-}
-.panel .buttons :last-child {
-  background-color: rgb(201, 255, 130);
-  color: #000;
-}
-.panel .buttons > *:hover {
-  filter: brightness(80%);
-}
-
-/**********************/
-/* CHECKBOXES */
-input[type="checkbox"] {
-  display: none;
-}
-label span {
-  transition: opacity 0.4s;
-  margin-left: 0.5rem;
-  padding: 0.25rem;
-  background-color: rgb(255, 166, 166);
-}
-#flex-direction ~ label {
-  position: relative;
-}
-
-#flex-direction ~ label span {
-  position: absolute;
-  top: 0;
-}
-#flex-direction:not(:checked) ~ * > .col {
-  opacity: 0;
-}
-#flex-direction:checked ~ * > .row {
-  opacity: 0;
-}
-
-#flex-wrap ~ label {
-  position: relative;
-}
-#flex-wrap ~ label span {
-  position: absolute;
-  top: 0;
-}
-#flex-wrap:not(:checked) ~ * > .no-wrap {
-  opacity: 0;
-}
-#flex-wrap:checked ~ * > .wrap {
-  opacity: 0;
-}
-
-.wrap,
-.row {
-  background-color: greenyellow;
-}
-
-/**********************/
 /* H1 TEXT & ICON */
-.title-text{
+h1 {
+  padding: 0 1rem;
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 2.5rem;
+  filter: drop-shadow(0px 0px 5px white);
+  cursor: default;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  user-select: none;
+}
+.title-text {
   width: 100%;
   padding: 0 1rem;
   text-align: center;
-  background-color: rgba(240, 230, 140, 0.356);
 }
-.🎩{
-  /* border: solid; */
+.🎩 {
   display: inline-block;
   transform-origin: 50% 50%;
   transform: rotate(180deg);
   will-change: transform, margin-right;
-  transition: transform .5s .1s, margin-right .5s .1s;
-  cursor: url('../assets/magic_wand.png'), crosshair;
-  
+  transition: transform 0.5s 0.1s, margin-right 0.5s 0.1s;
+  cursor: url("../assets/magic_wand.png"), crosshair;
 }
-.✨{
+.✨ {
   opacity: 0;
   font-size: 0px;
   z-index: -1;
-  /* position: absolute; */
   transform: translate(-5rem);
   will-change: transform, opacity, font-size;
-  transition: opacity .4s , transform .5s , font-size .6s;
+  transition: opacity 0.4s, transform 0.5s, font-size 0.6s;
 }
 
-h1:hover .🎩{
-  transition: transform .5s , margin .5s;
+h1:hover .🎩 {
+  transition: transform 0.5s, margin 0.5s;
   transform: rotate(270deg);
 }
 
-h1:hover .✨{
+h1:hover .✨ {
   opacity: 1;
   transform: translate(0px);
   font-size: inherit;
 }
-
-/* .🎩:hover{
-  transition: transform .5s , margin .5s;
-  transform: rotate(270deg);
-}
-.🎩:hover ~ .✨{
-  opacity: 1;
-  transform: translate(0px);
-  font-size: inherit;
-} */
-
 
 /**********************/
 /* Media queries */
 @media (min-width: 768px) {
-  footer{
+  footer {
     margin-bottom: 0;
   }
   .panel {
-    min-width: 35vw;
+    max-width: 70vw;
     margin: 0;
     order: 0;
   }
-  .d-md-none{
+  .container {
+    width: 70vw;
+  }
+  .d-md-none {
     display: none;
   }
-  .title-text{
+  .title-text {
     width: auto;
+  }
+  #item-form .grid-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 996px) {
-  body{
+  body {
     background-image: url("../assets/topography.svg"),
-    linear-gradient(45deg, var(--color-1), var(--color-2));
+      linear-gradient(45deg, var(--color-1), var(--color-2));
   }
   .panel {
-    min-width: 335px;
+    max-width: 40vw;
     margin: 0;
+  }
+  .container {
+    width: 50vw;
   }
 }
