@@ -73,6 +73,9 @@ h1 {
   transition: transform 0.5s 0.1s, margin-right 0.5s 0.1s;
   cursor: url("../assets/magic_wand.png"), crosshair;
 }
+.🎩:active{
+  filter: drop-shadow(0 0 8px gold);
+}
 .✨ {
   opacity: 0;
   font-size: 0px;
