@@ -133,14 +133,14 @@ Array.from(itemForm.elements).forEach((el) => {
 
 // **********************
 // EXTRA
-// const consoleColor = Math.floor(Math.random() * (180 - 30) + 30);
-// console.log("%c Hello, fellow Dev! \n ( ͡° ͜ʖ ͡°)つ",`background-color: #090909; color:hsl(${consoleColor}, 94%, 51%);font-size:2em;padding:2rem`);
-// console.log(`
-// %cI hope you found this snippet useful.
-// In that case, you can drop a like or follow me on:
-// - Twitter: 🐦 @branko_h 
-// - Github: 🐱‍🚀 /brankohbk 
-// - LinkedIn: 👨‍💼 /in/branko-haberkon 
-// so you don´t miss when i upload a new one. 
-// See you soon!`
-// ,`color:black;background-color: hsl(${consoleColor}, 94%, 51%);font-size:1.5em; padding: .5rem`);
+const consoleColor = Math.floor(Math.random() * (180 - 30) + 30);
+console.log("%c Hello, fellow Dev! \n ( ͡° ͜ʖ ͡°)つ",`background-color: #090909; color:hsl(${consoleColor}, 94%, 51%);font-size:2em;padding:2rem`);
+console.log(`
+%cI hope you found this snippet useful.
+In that case, you can drop a like or follow me on:
+- Twitter: 🐦 @branko_h 
+- Github: 🐱‍🚀 /brankohbk 
+- LinkedIn: 👨‍💼 /in/branko-haberkon 
+so you don´t miss when i upload a new one. 
+See you soon!`
+,`color:black;background-color: hsl(${consoleColor}, 94%, 51%);font-size:1.5em; padding: .5rem`);
